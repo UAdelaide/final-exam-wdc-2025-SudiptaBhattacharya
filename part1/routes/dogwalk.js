@@ -9,7 +9,8 @@ router.get('/api/dogs', async(req, res) => {
         `SELECT d.name, d.size,
             u.owner_username
         FROM Dogs d
-        JOIN Users u ON`
+        JOIN Users u ON d.owner_id = u.user_id
+        ORDER BY d.name`
     )
 })
 
