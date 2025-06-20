@@ -21,7 +21,7 @@ router.get('/api/dogs', async(req, res) => {
         console.error("Error fetching the list of dogs owned by each owner: ", error);
         //send status code in page and error message
         res.status(500).json({
-            'Failed to get list of dogs', error: error.message
+            message: 'Failed to get list of dogs', error: error.message})
         })
     }
 
