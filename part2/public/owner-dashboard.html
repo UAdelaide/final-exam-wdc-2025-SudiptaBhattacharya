@@ -94,6 +94,21 @@
         //add new ref to store array of owner's dogs:
         const ownerDogs = ref([]);
 
+        // Load the list of dogs owned by the current user
+      async function loadOwnerDogs() {
+        try {
+          const userId = 1; // Replace with dynamic user_id from session (e.g., req.session.user.user_id)
+          const res = await fetch(`/api/dogs?owner_id=${userId}`);
+          if (res.ok) {
+            ownerDogs.value = await res.json();
+          } else {
+            throw new Error('Failed to load owner dogs');
+          }
+        } catch (err) {
+          console.error('Error loading owner dogs:', err);
+        }
+      }
+
         async function loadWalks() {
           try {
             const res = await fetch('/api/walks');
@@ -152,7 +167,8 @@
           message,
           error,
           submitWalkRequest,
-          logout
+          logout,
+          //return new ownerDogs list
 
         };
       }
