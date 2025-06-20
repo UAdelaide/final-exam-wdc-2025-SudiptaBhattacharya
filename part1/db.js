@@ -40,4 +40,4 @@ let connection;
         // Exit the process if database initialization fails
         process.exit(1);
     }
-})
+}
