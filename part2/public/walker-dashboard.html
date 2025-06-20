@@ -77,6 +77,20 @@
           }
         }
 
+        // Updated logout function to match page.js style and endpoint
+      async function logout() {
+        try {
+          const response = await fetch('/api/users/logout', { method: 'POST' });
+          if (response.ok) {
+            window.location.href = 'index.html'; // Redirect to login page
+          } else {
+            throw new Error('Logout failed');
+          }
+        } catch (err) {
+          console.error('Logout failed:', err);
+        }
+      }
+      
         onMounted(() => {
           loadWalkRequests();
         });
