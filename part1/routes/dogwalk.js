@@ -69,7 +69,8 @@ router.get('/walkers/summary', async(req, res) => {
                 ROUND(AVG(wr.rating), 1) AS average_rating
                 FROM Users u
                 -- Use Left Join to join WalkRatings
-                LEFT JOIN WalkRatings wr 
+                LEFT JOIN WalkRatings wr ON u.user_id = wr.walker_id,
+                WHERE
         `)
     }
 })
