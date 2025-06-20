@@ -26,6 +26,6 @@ router.get('/dogs', async(req, res) => {
 });
 
 //GET /api/walkrequests/open -
-// this helps in returning all 
+// this helps in returning all walk requests currently open
 
 module.exports = router;
