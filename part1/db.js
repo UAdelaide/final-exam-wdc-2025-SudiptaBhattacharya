@@ -1,7 +1,5 @@
 const mysql = require('mysql2/promise');
 
-
-
 let connection;
 
 (async () => {
@@ -25,3 +23,4 @@ let connection;
 
     }
 });
+module.exports = pool;
