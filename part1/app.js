@@ -7,7 +7,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 //add new route path for dogs and dogs walk requests
-var dogWalkROuter = require('./routes/do')
+var dogWalkROuter = require('./routes/dogwalk');
 
 var app = express();
 
@@ -19,5 +19,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+
+//mount dogs and requests 
 
 module.exports = app;
