@@ -12,6 +12,7 @@ let connection;
 (async () => {
     try {
         const connection = await pool.getConnection();
-        console.log('Successfully connected to the database: ')
+        console.log('Successfully connected to the database: DogWalkService');
+        connection.
     }
 })
