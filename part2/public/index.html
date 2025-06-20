@@ -79,7 +79,9 @@
           //await for json response
           const data = await res.json();
 
-          //
+          //give error check if for some reason Login fails
+          if (!response.ok)
+          throw new Error
         }
       }
       }
