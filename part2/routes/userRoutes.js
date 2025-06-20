@@ -63,7 +63,7 @@ router.post('/login', async (req, res) => {
   }
 });
 
-// POST logout
+// POST logout - ends session , erases cookie data
 router.post('/logout', (req, res) => {
   req.session.destroy((err) => {
     if (err) {
