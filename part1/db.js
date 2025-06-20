@@ -13,7 +13,10 @@ let connection;
             password: '',
             database: 'DogWalkService'
         })
-        //create if not exists
+        console.log('Connected to MySQL database!');
+        // SQL INSERT statements from the previous interaction
+        const insertStatements =
+        ``
 
 
     }
