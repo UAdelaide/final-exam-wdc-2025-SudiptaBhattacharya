@@ -10,7 +10,10 @@ const app = express();
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
 
-//setup session management
+//setup session management:
+app.use(session({
+    secret: process.env.
+}))
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
