@@ -1,8 +1,16 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #ff00ff;
+  font-family: Comic Sans MS;
+  color: yellow;
 }
-
-a {
-  color: #00B7FF;
+.tiny-button {
+  font-size: 6px;
+  margin-left: 500px;
+}
+.dog-img {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  right: 0;
+  top: 300px;
 }
