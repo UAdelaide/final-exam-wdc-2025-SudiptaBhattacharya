@@ -57,7 +57,8 @@ const insertSampleData = async () => {
             `);
           }
 
-        //insert 
+        //insert ratings test data to test for json response retrieved from /walkers/summary
+        const []
       console.log('Sample data inserted.');
 
     } catch (err) {
