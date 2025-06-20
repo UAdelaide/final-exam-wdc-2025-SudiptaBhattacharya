@@ -66,7 +66,8 @@ const insertSampleData = async () => {
             INSERT INTO WalkRatings(request_id, walker_id, owner_id, rating, comments)
             VALUES
             (3, 2, 1, 6, 'Good job, he loved it!'),
-            
+            (2, 4, 3, 3)
+
 
             `)
         }
