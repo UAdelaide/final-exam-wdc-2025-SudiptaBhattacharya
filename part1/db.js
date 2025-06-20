@@ -16,7 +16,7 @@ let connection;
         console.log('Connected to MySQL database!');
         // SQL INSERT statements from the previous interaction
         const insertStatements =
-        ``
+        `INSERT INTO Users (username, email, password_hash, role) VALUES`
 
 
     }
