@@ -7,7 +7,7 @@ let connection;
 (async () => {
     try {
         //connect to mysql without specifying a database
-        const connection = await mysql.getConnection({
+         connection = await mysql.getConnection({
             host: 'localhost',
             user: 'root',
             password: '',
