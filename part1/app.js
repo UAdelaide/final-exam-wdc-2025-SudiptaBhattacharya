@@ -62,5 +62,9 @@ const insertSampleData = async () => {
     }
   };
 
-  
+  app.listen(PORT, async () => {
+    await insertSampleData();
+    console.log(`Server running on http://localhost:${PORT}`);
+  });
+
 module.exports = app;
