@@ -2,7 +2,7 @@ const mysql = require('mysql2/promise');
 
 let connection;
 
-(async function initializeDb() {
+async function initializeDb() {
     try {
         //connect to mysql without specifying a database
          connection = await mysql.createConnection({
@@ -40,4 +40,6 @@ let connection;
         // Exit the process if database initialization fails
         process.exit(1);
     }
+}
+
 }
