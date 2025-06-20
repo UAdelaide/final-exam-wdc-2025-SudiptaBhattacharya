@@ -48,7 +48,9 @@
                     //using fetch method: AJAX for serving dynamic button and images through
                     //API endpoints
                     fetch('https://dog.ceo/api/breeds/image/random')
-                        .them
+                        //get json response
+                        .then(res => res.json())
+                        .then
                 }
             }
         })
