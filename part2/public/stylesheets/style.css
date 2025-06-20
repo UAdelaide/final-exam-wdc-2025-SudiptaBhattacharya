@@ -155,9 +155,9 @@ textarea {
 section {
     display: none;
 }
-/* New or Updated for Login Form UI ========== */
+/* New logic for Login form button UI */
 
-/* Centered login container with background and padding */
+/* centered login container with background and padding */
 .login-form {
     max-width: 400px;
     margin: 6em auto 2em;
