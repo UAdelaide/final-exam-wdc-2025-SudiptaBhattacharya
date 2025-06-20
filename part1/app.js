@@ -57,7 +57,7 @@ const insertSampleData = async () => {
             `);
           }
 
-
+        //insert 
       console.log('Sample data inserted.');
 
     } catch (err) {
