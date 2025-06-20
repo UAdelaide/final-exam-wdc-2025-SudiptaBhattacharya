@@ -13,6 +13,8 @@ let connection;
             password: '',
             database: 'DogWalkService'
         })
+        //create if not exists
+
 
     }
 })
