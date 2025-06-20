@@ -97,14 +97,22 @@
         // Load the list of dogs owned by the current user
       async function loadOwnerDogs() {
         try {
-          const userId = 1; // Replace with dynamic user_id from session (e.g., req.session.user.user_id)
+          // Fetch the current user's data from the session
+          const userRes = await fetch('/api/users/me');
+          if (!userRes.ok) throw new Error('Failed to get user');
+          const userData = await userRes.json();
+          const userId = userData.user_id;
+
+          // Fetch the list of dogs for the current owner
           const res = await fetch(`/api/dogs?owner_id=${userId}`);
           if (res.ok) {
             ownerDogs.value = await res.json();
           } else {
-            throw new Error('Failed to load owner dogs');
+            const errorText = await res.text();
+            throw new Error(`Failed to load owner dogs: ${errorText}`);
           }
         } catch (err) {
+          error.value = err.message;
           console.error('Error loading owner dogs:', err);
         }
       }
