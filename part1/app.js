@@ -39,7 +39,8 @@ const insertSampleData = async () => {
           `);
 
       await db.query(`
-     
+      
+
       await db.query(`
         INSERT IGNORE INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
         VALUES
