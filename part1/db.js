@@ -48,6 +48,6 @@ async function initializeDb() {
 }
 
 module.exports = {
-    initializeDatabase,
+    initializeDb,
     getConnection: () => connection // Method to get the initialized connection
 };
