@@ -4,7 +4,7 @@ var db = require('../db')
 
 // GET /api/dogs: returning the list of all dogs
 //with their respective name,size and owner's username
-router.get('/api/dogs', async(req, res) => {
+router.get('/dogs', async(req, res) => {
     //use try-catch block for error check
     try{
     const [rows] = await db.query(
