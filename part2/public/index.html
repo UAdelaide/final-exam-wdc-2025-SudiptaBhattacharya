@@ -93,7 +93,9 @@
         }
 
         }
-        catch(err)
+        catch(err){
+          err.value = err.message;
+        }
       }
       }
 
