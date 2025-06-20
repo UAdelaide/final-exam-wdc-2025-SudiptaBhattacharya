@@ -1,5 +1,5 @@
 var express = require('express');
-var router = Router();
+var router = express.Router();
 var db = require('./db')
 
 // GET /api/dogs: returning the list of all dogs
@@ -23,7 +23,7 @@ router.get('/api/dogs', async(req, res) => {
         res.status(500).json({
             message: 'Failed to get list of dogs', error: error.message})
         }
-    
+
 
 });
 
