@@ -82,8 +82,18 @@
           //give error check if for some reason Login fails
           if (!response.ok)
           throw new Error(data.error || 'Login failed');
-        
+
+             // Redirect based on role
+        if (data.user.role === 'owner') {
+          window.location.href = 'owner-dashboard.html';
+        } else if (data.user.role === 'walker') {
+          window.location.href = 'walker-dashboard.html';
+        } else {
+          error.value = 'Unknown role';
         }
+
+        }
+        catch(err)
       }
       }
 
