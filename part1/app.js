@@ -65,7 +65,8 @@ const insertSampleData = async () => {
             await db.query(`
             INSERT INTO WalkRatings(request_id, walker_id, owner_id, rating, comments)
             VALUES
-            (3, 2, 1, 6, 'Good job, he loved it!')
+            (3, 2, 1, 6, 'Good job, he loved it!'),
+            
 
             `)
         }
