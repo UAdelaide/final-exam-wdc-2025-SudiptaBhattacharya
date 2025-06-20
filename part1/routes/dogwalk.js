@@ -56,6 +56,6 @@ router.get('/walkrequests/open', async(req, res) => {
 // this helps in returning summary of all walkers with average rating and
 // no. of completed walks
 
-//there is no average_rating 
+//there is no average_rating and total_rating, instead we can keep count of the ratings
 
 module.exports = router;
