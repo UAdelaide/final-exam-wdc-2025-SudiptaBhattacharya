@@ -11,6 +11,7 @@ let connection;
 
 (async () => {
     try {
-        const connection = 
+        const connection = await pool.getConnection();
+        console.log()
     }
 })
