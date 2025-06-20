@@ -19,5 +19,7 @@ let connection;
         `INSERT INTO Users (username, email, password_hash, role) VALUES`
         ('eve_owner', 'eve@example.com', 'secretpass2', 'owner');
 
+        
+
     }
 })
