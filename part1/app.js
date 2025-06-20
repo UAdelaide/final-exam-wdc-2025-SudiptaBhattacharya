@@ -63,10 +63,11 @@ const insertSampleData = async () => {
           (5, '2025-06-12 14:00:00', 60, 'BedFord Park', 'cancelled'),
           (4, '2025-06-13 16:00:00', 20, 'HindMarsh Square', 'open');
       `);
-      
+ }
 
 
       console.log('Sample data inserted.');
+}
     } catch (err) {
       console.error('Error inserting sample data:', err);
     }
