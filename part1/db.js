@@ -26,7 +26,8 @@ let connection;
             INSERT INTO Dogs (owner_id, name, size) VALUES
             ((SELECT user_id FROM Users WHERE username = 'eve_owner'), 'Charlie', 'large');
 
-
+            ((SELECT dog_id FROM Dogs WHERE name = 'Charlie' AND owner_id = (SELECT user_id FROM Users WHERE username = 'eve_owner')), '2025-06-11 14:00:00', 60, 'City Central Park', 'open');
+                INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES
 
         `;
         await connection.query(insertStatements);
