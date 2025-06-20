@@ -19,7 +19,7 @@
         <!--v-if clause for Image of dog section-->
         <div v-if="dogImage">
             <img :src="dogImage"
-            alt="nothing here" class="dog-image">
+            alt="" class="dog-image">
 
             <p>Name: Loyal Puppy</p>
             <p>Want to know the breed?</p>
@@ -51,8 +51,8 @@
                         //get json response
                         .then(res => res.json())
                         .then(data => {
-                            this.dogImage = data
-                        })
+                            this.dogImage = data.message;
+                        });
                 }
             }
         })
