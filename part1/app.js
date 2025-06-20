@@ -52,7 +52,7 @@ const insertSampleData = async () => {
           }
 
 
-      await db.query(`
+      await db.query('SELECT COUNT(*) AS count FROM Users'
         INSERT IGNORE INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
         VALUES
           (1, '2025-06-10 08:00:00', 30, 'Parklands', 'open'),
