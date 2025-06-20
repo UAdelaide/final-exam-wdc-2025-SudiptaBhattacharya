@@ -159,6 +159,8 @@
 
         onMounted(() => {
           loadWalks();
+          //load dogs list in dropdown option when component is mounted
+          loadOwnerDogs();
         });
 
         return {
