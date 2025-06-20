@@ -59,6 +59,12 @@ router.get('/walkrequests/open', async(req, res) => {
 //there is no average_rating and total_rating, instead we can keep count of the ratings
 //as total_ratings and round them to get average_rating
 
-router.get('/walkers/summary')
+router.get('/walkers/summary', async(req, res) => {
+    try{
+        const [rows] = await db.query(`
+        
+        `)
+    }
+})
 
 module.exports = router;
