@@ -45,6 +45,7 @@ router.get('/walkrequests/open', async(req, res) => {
 
     }
     catch(error){
+        console.error("Error in returning open walk reu")
 
     }
 })
