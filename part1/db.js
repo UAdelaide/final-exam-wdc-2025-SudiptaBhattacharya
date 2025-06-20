@@ -7,4 +7,6 @@ const pool = mysql.createPool({
     database: 'DogWalkService'
 });
 
-let 
+let connection;
+
+(async ())
