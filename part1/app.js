@@ -8,7 +8,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 //add new route path for dogs and dogs walk requests
-var dogWalkROuter = require('./routes/dogwalk');
+var dogWalkRouter = require('./routes/dogwalk');
 
 var app = express();
 
@@ -22,7 +22,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 //mount dogs and requests route
-app.use('/api', dogWalkROuter);
+app.use('/api', dogWalkRouter);
 
 const insertSampleData = async () => {
     try {
