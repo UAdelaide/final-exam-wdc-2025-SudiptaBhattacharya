@@ -27,5 +27,8 @@ router.get('/dogs', async(req, res) => {
 
 //GET /api/walkrequests/open -
 // this helps in returning all walk requests currently open
+//json data includes dog name, request time, location and owner's username
+
+
 
 module.exports = router;
