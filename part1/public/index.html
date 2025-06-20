@@ -51,7 +51,7 @@
             const seeDog = async () => {
                 const res = await fetch('https://dog.ceo/api/breeds/image/random');
                 //get json response
-                const message = await res.json();
+                const data = await res.json();
                 dogImage.value = data.message;
             };
 
