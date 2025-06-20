@@ -12,7 +12,7 @@ router.get('/dogs', async(req, res) => {
             u.username AS owner_username
         FROM Dogs d
         JOIN Users u ON d.owner_id = u.user_id
-        
+
         `
     );
     res.json(rows);
@@ -24,5 +24,7 @@ router.get('/dogs', async(req, res) => {
             message: 'Failed to get list of dogs', error: error.message})
         }
 });
+
+//GET /api/
 
 module.exports = router;
