@@ -17,7 +17,7 @@ let connection;
         // SQL INSERT statements from the previous interaction
         const insertStatements =
         `INSERT INTO Users (username, email, password_hash, role) VALUES`
-
+        ('eve_owner', 'eve@example.com', 'secretpass2', 'owner');
 
     }
 })
