@@ -70,7 +70,7 @@ router.get('/walkers/summary', async(req, res) => {
                 (
                     SELECT COUNT(*)
                     FROM WalkRequests wrs
-                    JOIN WalkApplications wa ON wr.request_id = wa.request_id
+                    JOIN WalkApplications wa ON wrs.request_id = wa.request_id
                     WHERE wa.walker_id = u.user_id
                     AND wr.status = 'completed'
                     AND wa.status = 'accepted' -- Making sure completed walks includes completed
