@@ -11,7 +11,7 @@ body{
     }
 
     .dog-picture {
-      position: center;
+      position: bottom;
       bottom: 50;
       right: 50;
       width: 300px;
