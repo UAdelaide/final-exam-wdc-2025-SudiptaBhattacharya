@@ -62,4 +62,5 @@ const insertSampleData = async () => {
     }
   };
 
+  
 module.exports = app;
