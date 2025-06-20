@@ -66,7 +66,7 @@ router.get('/walkers/summary', async(req, res) => {
         const [rows] = await db.query(`
         SELECT u.username AS walker_username,
                 COUNT(wr.rating_id) AS total_ratings,
-                ROUND(AVG(wr.rating), 1) AS average_rating
+                ROUND(AVG(wr.rating), 1) AS average_rating,
                 (
                     SELECT COUNT(*)
                     FROM WalkRequests wrs
