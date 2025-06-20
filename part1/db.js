@@ -2,8 +2,8 @@ const mysql = require('mysql2/promise');
 
 let connection;
 
-const pool = mysql{
-    try {
+const pool = mysql.createPool({
+
         //connect to mysql without specifying a database
          connection = await mysql.createConnection({
             host: 'localhost',
@@ -12,4 +12,4 @@ const pool = mysql{
             database: 'DogWalkService'
         });
         console.log('Connected to MySQL database!');
-    }
+    
