@@ -12,6 +12,6 @@ let connection;
 (async () => {
     try {
         const connection = await pool.getConnection();
-        console.log()
+        console.log('Successfully connected to the database: ')
     }
 })
