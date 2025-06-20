@@ -6,7 +6,9 @@ let connection;
 
 (async () => {
     try {
-        const connection = await pool.getConnection();
+
+
+        const connection = await mysql.getConnection();
         console.log('Successfully connected to the database: DogWalkService');
         connection.
     }
