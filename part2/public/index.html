@@ -81,7 +81,8 @@
 
           //give error check if for some reason Login fails
           if (!response.ok)
-          throw new Error
+          throw new Error(data.error || 'Login failed');
+        
         }
       }
       }
