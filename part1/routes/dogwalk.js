@@ -68,7 +68,6 @@ router.get('/walkers/summary', async(req, res) => {
                 COUNT(wr.rating_id) AS total_ratings,
                 ROUND(AVG(wr.rating), 1) AS average_rating
                 FROM Users u
-                -- Use Left Join to join WalkRatings
                 LEFT JOIN WalkRatings wr ON u.user_id = wr.walker_id,
                 WHERE u.role = 'walker'
                 GROUP BY u.user_id
@@ -79,8 +78,7 @@ router.get('/walkers/summary', async(req, res) => {
     catch(error){
         console.error("Error in returning summary of each walker ", error);
         res.status(500).json({
-            error: `Failed to fetch the summary of each walker with their average
-            rating and number of completed walks. `});
+            error: `Failed to fetch the summary of each walker with their average rating and number of completed walks. `});
 
     }
 });
