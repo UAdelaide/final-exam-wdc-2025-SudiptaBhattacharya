@@ -53,7 +53,17 @@
         //this above stores the fetched user_id
 
         //new function: to get the current user's ID:
-        
+        async function getCurrentUser() {
+        try {
+          const response = await fetch('/api/users/me');
+          if (!response.ok) throw new Error('Failed to get current user');
+          const userData = await response.json();
+          currentUserId.value = userData.user_id;
+        } catch (err) {
+          error.value = err.message;
+          console.error('Error fetching current user:', err);
+        }
+      }
 
         async function loadWalkRequests() {
           try {
