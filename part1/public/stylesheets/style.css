@@ -1,16 +1,28 @@
-body {
-  background-color: black;
-  font-family: Comic Sans MS;
-  color: yellow;
-}
-.tiny-button {
-  font-size: 6px;
-  margin-left: 500px;
-}
-.dog-image {
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  right: 0;
-  top: 300px;
-}
+{
+  background-color: lime;
+      font-family: Papyrus, cursive;
+      color: red;
+    }
+
+    .tiny-button {
+      font-size: 5px;
+      margin-top: 300px;
+      margin-left: 600px;
+    }
+
+    img.dog-pic {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100px;
+      height: 100px;
+    }
+
+    .flashing-text {
+      animation: flash 0.3s infinite alternate;
+    }
+
+    @keyframes flash {
+      from { color: red; }
+      to { color: yellow; }
+    }
