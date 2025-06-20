@@ -155,7 +155,7 @@ textarea {
 section {
     display: none;
 }
-/* ========== New or Updated for Login Form UI ========== */
+/* New or Updated for Login Form UI ========== */
 
 /* Centered login container with background and padding */
 .login-form {
@@ -207,7 +207,7 @@ section {
   .login-form button.btn-primary:hover {
     background-color: #0056b3;
   }
-  
+
   .login-form input:focus {
     border-color: #007bff;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
