@@ -71,12 +71,13 @@
             headers: { 'Content-Type': 'application/json'},
 
             body: JSON.stringify({
-              username:username.value, password:password.value
+              username:username.value,
+              password:password.value
             })
 
           });
           //await for json response
-          const data = await res.json();
+          const data = await response.json();
 
           //give error check if for some reason Login fails
           if (!response.ok)
