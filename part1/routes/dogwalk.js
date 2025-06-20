@@ -8,7 +8,7 @@ router.get('/dogs', async(req, res) => {
     //use try-catch block for error check
     try{
     const [rows] = await db.query(
-        `SELECT d.name, d.size,
+        `SELECT d.name AS dog, d.size,
             u.username
         FROM Dogs d
         JOIN Users u ON d.owner_id = u.user_id
