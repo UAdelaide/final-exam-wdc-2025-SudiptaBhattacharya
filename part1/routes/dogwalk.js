@@ -23,8 +23,6 @@ router.get('/api/dogs', async(req, res) => {
         res.status(500).json({
             message: 'Failed to get list of dogs', error: error.message})
         }
-
-
 });
 
 module.exports = router;
