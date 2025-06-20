@@ -28,7 +28,7 @@ router.post('/register', async (req, res) => {
   }
 });
 
-router.get('/users/me', (req, res) => {
+router.get('/me', (req, res) => {
   if (req.session.user) {
     res.json({ user_id: req.session.user.user_id, username: req.session.user.username });
   } else {
