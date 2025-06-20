@@ -38,7 +38,18 @@ const insertSampleData = async () => {
               ('alex999', 'alex@example.com', 'hashed550', 'walker')
           `);
 
-      
+          const [dogRows] = await db.query('SELECT COUNT(*) AS count FROM Dogs');
+          if (dogRows[0].count === 0) {
+            await db.query(`
+              INSERT INTO Dogs (owner_id, name, size)
+              VALUES
+                (1, 'Max', 'medium'),
+                (3, 'Bella', 'small'),
+                (1, 'Mylo', 'small'),
+                (3, 'Teddy', 'large'),
+                (3, 'Becky', 'medium')
+            `);
+          }
 
 
       await db.query(`
