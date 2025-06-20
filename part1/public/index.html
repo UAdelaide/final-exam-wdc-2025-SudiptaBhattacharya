@@ -47,14 +47,13 @@
         createApp{
             setup() {
             const dogImage = ref(''),
+                //using fetch method: AJAX for serving dynamic button and images through
+                    //API endpoints
 
             },
 
-            methods: {
-                seeDog(){
-                    //using fetch method: AJAX for serving dynamic button and images through
-                    //API endpoints
-                    fetch('https://dog.ceo/api/breeds/image/random')
+            
+
                         //get json response
                         .then(res => res.json())
                         .then(data => {
