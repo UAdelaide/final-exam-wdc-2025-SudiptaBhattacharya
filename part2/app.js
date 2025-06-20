@@ -12,7 +12,9 @@ app.use(express.static(path.join(__dirname, '/public')));
 
 //setup session management:
 app.use(session({
-    secret: process.env.
+    secret: process.env.SESSION_SECRET || 'dog-secret',
+    resave: false,
+    saveUninitialized
 }))
 
 // Routes
