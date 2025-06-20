@@ -78,7 +78,7 @@ router.get('/walkers/summary', async(req, res) => {
     catch(error){
         console.error("Error in returning summary of each walker ", error);
         res.status(500).json({
-            error: `Failed to fetch the summary of each walker with their average rating and number of completed walks. `});
+            error: 'Failed to fetch the summary of each walker with their average rating and number of completed walks. '});
 
     }
 });
