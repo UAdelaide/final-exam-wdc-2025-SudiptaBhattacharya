@@ -55,18 +55,9 @@
                 const message = await res.json();
                 dogImage.value = data.message;
             };
-            return { dogIma}
+            return { dogImage, seeDog};
 
             },
-
-
-
-                        //get json response
-                        .then(res => res.json())
-                        .then(data => {
-                            this.dogImage = data.message;
-                        });
-                }
             }
         })
 
