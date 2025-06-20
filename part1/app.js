@@ -62,7 +62,9 @@ const insertSampleData = async () => {
         //check if ratings table is empty
         if (walkRatings[0].count == 0){
             //now populate by inserting some test data
-            INSERT
+            await db.query(`
+            INSERT INTO WalkRatings
+            `)
         }
       console.log('Sample data inserted.');
 
