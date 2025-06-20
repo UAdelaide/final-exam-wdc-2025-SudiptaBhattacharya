@@ -51,11 +51,12 @@
                     //API endpoints
             const seeDog = async () => {
                 const res = await fetch('https://dog.ceo/api/breeds/image/random');
-
+                //get json response
                 const message = await res.json();
                 dogImage.value = data.message;
             };
-            return { dogImage, seeDog};
+
+            return { dogImage, seeDog };
 
             }
 
