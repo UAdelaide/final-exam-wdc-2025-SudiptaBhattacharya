@@ -78,7 +78,13 @@
         async function applyToWalk(requestId) {
           try {
             //introduce changes: make sure to wait for  getting current walker_id
-            
+            if (!currentUserId.value) {
+            await getCurrentUser(); // Ensure user ID is fetched if not already available
+          }
+          if (!currentUserId.value) {
+            throw new Error('User ID not available');
+          }
+
             const res = await fetch(`/api/walks/${requestId}/apply`, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
@@ -112,6 +118,7 @@
 
         onMounted(() => {
           loadWalkRequests();
+          //new: 
         });
 
         return {
