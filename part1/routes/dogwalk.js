@@ -48,8 +48,11 @@ router.get('/walkrequests/open', async(req, res) => {
         console.error("Error in returning open walk requests available", error);
         res.status(500).json({
             error: 'Failed to fetch the open walk requests'});
-        
+
     }
-})
+});
+
+//GET /api/walkrequests/open -
+// this helps in returning all walk requests currently open
 
 module.exports = router;
