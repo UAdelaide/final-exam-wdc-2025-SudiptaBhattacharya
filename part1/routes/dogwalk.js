@@ -32,7 +32,8 @@ router.get('/dogs', async(req, res) => {
 router.get('/walkrequests/open', async(req, res) => {
     try{
         const [rows] = await db.query(`
-        Select wrs.request_id, d.name AS dog`)
+        Select wrs.request_id, d.name AS dog_name,
+                `)
 
     }
     catch(error){
