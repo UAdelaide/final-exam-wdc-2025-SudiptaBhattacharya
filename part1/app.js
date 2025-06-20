@@ -58,7 +58,8 @@ const insertSampleData = async () => {
           }
 
         //insert ratings test data to test for json response retrieved from /walkers/summary
-        const [walkRatings] = await db.query('SELECT COUNT(*) AS count F')
+        const [walkRatings] = await db.query('SELECT COUNT(*) AS count FROM WalkRatings');
+        //check if 
       console.log('Sample data inserted.');
 
     } catch (err) {
