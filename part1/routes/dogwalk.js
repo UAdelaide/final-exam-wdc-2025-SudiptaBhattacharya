@@ -59,7 +59,7 @@ router.get('/walkrequests/open', async(req, res) => {
 //there is no average_rating and total_rating, instead we can keep count of the rating_id
 //count(rating_id) will count how many times a walker was rated by owner
 //as total_ratings and
-//round them to get average_rating
+//AVG()
 
 router.get('/walkers/summary', async(req, res) => {
     try{
