@@ -18,7 +18,7 @@ router.get('/api/dogs', async(req, res) => {
     res.json(rows);
 }
     catch(error){
-        console.error("")
+        console.error("Error fetching the list of dogs owned by each owner: ", error)
     }
 
 })
