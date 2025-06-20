@@ -18,6 +18,7 @@ let connection;
          if (rows[0].count === 0) {
             console.log('Users table is empty. Inserting initial data...');
 
+            //inserting data if empty
             const insertStatements =
             `INSERT INTO Users (username, email, password_hash, role) VALUES
             ('eve_owner', 'eve@example.com', 'secretpass2', 'owner');
