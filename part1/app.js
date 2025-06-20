@@ -53,7 +53,7 @@ const insertSampleData = async () => {
 
 
       const [walkRequestRows] = await db.query('SELECT COUNT(*) AS count FROM WalkRequests');
-          if (walkRequestRows[0].count == 0) {}
+          if (walkRequestRows[0].count == 0) {
         INSERT IGNORE INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
         VALUES
           (1, '2025-06-10 08:00:00', 30, 'Parklands', 'open'),
@@ -62,6 +62,7 @@ const insertSampleData = async () => {
           (5, '2025-06-12 14:00:00', 60, 'BedFord Park', 'cancelled'),
           (4, '2025-06-13 16:00:00', 20, 'HindMarsh Square', 'open');
       `);
+          
 
       console.log('Sample data inserted.');
     } catch (err) {
