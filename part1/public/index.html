@@ -49,7 +49,9 @@
             const dogImage = ref(''),
                 //using fetch method: AJAX for serving dynamic button and images through
                     //API endpoints
-            const seeDog = async ()
+            const seeDog = async () => {
+                const res = await fetch('https://dog.ceo/api/breeds/image/random')
+            }
 
             },
 
