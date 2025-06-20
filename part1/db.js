@@ -18,9 +18,9 @@ let connection;
         ('eve_owner', 'eve@example.com', 'secretpass2', 'owner');
 
         INSERT INTO Dogs (owner_id, name, size) VALUES
+        
 
         `
 
     }
-});
-module.exports = pool;
+})
