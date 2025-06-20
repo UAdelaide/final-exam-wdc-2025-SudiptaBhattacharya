@@ -9,7 +9,9 @@ let connection;
         //connect to mysql without specifying a database
         const connection = await mysql.getConnection({
             host: 'localhost',
-            
+            user: 'root',
+            password: '',
+            database: 'DogWalkService'
         })
 
     }
