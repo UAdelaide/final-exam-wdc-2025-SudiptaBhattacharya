@@ -6,9 +6,10 @@ let connection;
 
 (async () => {
     try {
+        //connect to mysql without specifying a database
+        const connection = await mysql.getConnection({
+            
+        })
 
-        const connection = await mysql.getConnection();
-        console.log('Successfully connected to the database: DogWalkService');
-        connection.
     }
 })
