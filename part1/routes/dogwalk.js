@@ -52,7 +52,7 @@ router.get('/walkrequests/open', async(req, res) => {
     }
 });
 
-//GET /api/walkrequests/open -
+//GET /api/walkers/summary- 
 // this helps in returning all walk requests currently open
 
 module.exports = router;
