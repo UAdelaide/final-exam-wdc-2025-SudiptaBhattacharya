@@ -63,7 +63,9 @@ const insertSampleData = async () => {
         if (walkRatings[0].count == 0){
             //now populate by inserting some test data
             await db.query(`
-            INSERT INTO WalkRatings(request_id, walker_id, owner_id, rating,)
+            INSERT INTO WalkRatings(request_id, walker_id, owner_id, rating, comments)
+            VALUES
+            (3, 2, 1, )
 
             `)
         }
