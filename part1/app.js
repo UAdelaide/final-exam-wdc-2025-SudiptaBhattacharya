@@ -54,8 +54,8 @@ const insertSampleData = async () => {
         VALUES
           (1, '2025-06-10 08:00:00', 30, 'Parklands', 'open'),
 
-      `);
- }
+            `);
+          }
 
 
       console.log('Sample data inserted.');
