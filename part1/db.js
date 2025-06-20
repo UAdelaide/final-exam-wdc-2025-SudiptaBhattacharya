@@ -12,16 +12,18 @@ let connection;
             database: 'DogWalkService'
         });
         console.log('Connected to MySQL database!');
-        
+
          // Check if the Users table already contains data
          const [rows] = await connection.execute('SELECT COUNT(*) AS count FROM Users');
          if (rows[0].count === 0) {
-        const insertStatements =
-        `INSERT INTO Users (username, email, password_hash, role) VALUES
-        ('eve_owner', 'eve@example.com', 'secretpass2', 'owner');
+            console.log('Users table is empty. Inserting initial data...');
 
-        INSERT INTO Dogs (owner_id, name, size) VALUES
-        ((SELECT user_id FROM Users WHERE username = 'eve_owner'), 'Charlie', 'large');
+            const insertStatements =
+            `INSERT INTO Users (username, email, password_hash, role) VALUES
+            ('eve_owner', 'eve@example.com', 'secretpass2', 'owner');
+
+            INSERT INTO Dogs (owner_id, name, size) VALUES
+            ((SELECT user_id FROM Users WHERE username = 'eve_owner'), 'Charlie', 'large');
 
 
 
