@@ -70,7 +70,7 @@ router.get('/walkers/summary', async(req, res) => {
                 (
                     SELECT COUNT(*)
                     FROM WalkRequests wrs
-                    JOIN
+                    JOIN WalkApplications wa
                 )
                 FROM Users u
                 LEFT JOIN WalkRatings wr ON u.user_id = wr.walker_id
