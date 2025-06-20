@@ -155,3 +155,74 @@ textarea {
 section {
     display: none;
 }
+/* ========== New or Updated for Login Form UI ========== */
+
+/* Centered login container with background and padding */
+.login-form {
+    max-width: 400px;
+    margin: 6em auto 2em;
+    padding: 2em;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Heading above the login form */
+  .login-form h1 {
+    font-size: 2rem;
+    color: #007bff;
+    font-weight: bold;
+    margin-bottom: 1.5em;
+    text-align: center;
+  }
+
+  /* Label styling (reusing existing form-label class from Bootstrap but enhancing globally if needed) */
+  .login-form label {
+    font-weight: 600;
+  }
+
+  /* Input styling for both fields */
+  .login-form input[type="text"],
+  .login-form input[type="password"] {
+    width: 100%;
+    padding: 0.6em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #ffffcc; /* light yellow to match the screenshot */
+    margin-bottom: 1em;
+  }
+
+  /* Submit button styling (refined Bootstrap override) */
+  .login-form button.btn-primary {
+    width: 100%;
+    padding: 0.75em;
+    background-color: #007bff;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+  }
+
+  .login-form button.btn-primary:hover {
+    background-color: #0056b3;
+  }
+
+  /* Error message styling */
+  .text-danger {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 1em;
+  }
+
+  /* Responsive text alignment for mobile */
+  @media (max-width: 576px) {
+    .login-form {
+      margin: 4em 1em 2em;
+      padding: 1.5em;
+    }
+
+    .login-form h1 {
+      font-size: 1.6rem;
+    }
+  }
