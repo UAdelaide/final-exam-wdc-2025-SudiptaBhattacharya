@@ -12,7 +12,10 @@ let connection;
             database: 'DogWalkService'
         });
         console.log('Connected to MySQL database!');
-        // SQL INSERT statements from the previous interaction
+        
+         // Check if the Users table already contains data
+         const [rows] = await connection.execute('SELECT COUNT(*) AS count FROM Users');
+         if (rows[0].count === 0) {
         const insertStatements =
         `INSERT INTO Users (username, email, password_hash, role) VALUES
         ('eve_owner', 'eve@example.com', 'secretpass2', 'owner');
