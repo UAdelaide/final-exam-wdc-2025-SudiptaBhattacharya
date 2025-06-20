@@ -26,26 +26,20 @@ app.use('/api', dogWalkRouter);
 
 const insertSampleData = async () => {
     try {
-      await db.query(`
-        INSERT IGNORE INTO Users (username, email, password_hash, role)
-        VALUES
-          ('alice123', 'alice@example.com', 'hashed123', 'owner'),
-          ('bobwalker', 'bob@example.com', 'hashed456', 'walker'),
-          ('carol123', 'carol@example.com', 'hashed789', 'owner'),
-          ('reet120', 'reet@example.com', 'hashed200', 'walker'),
-          ('alex999', 'alex@example.com', 'hashed550', 'walker');
-      `);
+        const [userRows] = await db.query('SELECT COUNT(*) AS count FROM Users');
+        if (userRows[0].count === 0) {
+          await db.query(`
+            INSERT INTO Users (username, email, password_hash, role)
+            VALUES
+              ('alice123', 'alice@example.com', 'hashed123', 'owner'),
+              ('bobwalker', 'bob@example.com', 'hashed456', 'walker'),
+              ('carol123', 'carol@example.com', 'hashed789', 'owner'),
+              ('reet120', 'reet@example.com', 'hashed200', 'walker'),
+              ('alex999', 'alex@example.com', 'hashed550', 'walker')
+          `);
 
       await db.query(`
-        INSERT IGNORE INTO Dogs (owner_id, name, size)
-        VALUES
-          (1, 'Max', 'medium'),
-          (3, 'Bella', 'small'),
-          (1, 'Mylo', 'small'),
-          (3, 'Teddy', 'large'),
-          (3, 'Becky', 'medium');
-      `);
-
+     
       await db.query(`
         INSERT IGNORE INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
         VALUES
