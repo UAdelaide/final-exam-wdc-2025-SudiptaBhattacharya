@@ -32,10 +32,7 @@ const insertSampleData = async () => {
             INSERT INTO Users (username, email, password_hash, role)
             VALUES
               ('alice123', 'alice@example.com', 'hashed123', 'owner'),
-              ('bobwalker', 'bob@example.com', 'hashed456', 'walker'),
-              ('carol123', 'carol@example.com', 'hashed789', 'owner'),
-              ('reet120', 'reet@example.com', 'hashed200', 'walker'),
-              ('alex999', 'alex@example.com', 'hashed550', 'walker')
+             
           `);
 
           const [dogRows] = await db.query('SELECT COUNT(*) AS count FROM Dogs');
@@ -44,10 +41,7 @@ const insertSampleData = async () => {
               INSERT INTO Dogs (owner_id, name, size)
               VALUES
                 (1, 'Max', 'medium'),
-                (3, 'Bella', 'small'),
-                (1, 'Mylo', 'small'),
-                (3, 'Teddy', 'large'),
-                (3, 'Becky', 'medium')
+
             `);
           }
 
@@ -58,10 +52,7 @@ const insertSampleData = async () => {
             INSERT IGNORE INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
         VALUES
           (1, '2025-06-10 08:00:00', 30, 'Parklands', 'open'),
-          (2, '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted'),
-          (3, '2025-06-11 10:00:00', 25, 'Botanic Park', 'completed'),
-          (5, '2025-06-12 14:00:00', 60, 'BedFord Park', 'cancelled'),
-          (4, '2025-06-13 16:00:00', 20, 'HindMarsh Square', 'open');
+
       `);
  }
 
