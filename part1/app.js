@@ -68,7 +68,6 @@ const insertSampleData = async () => {
             (3, 2, 1, 6, 'Good job, he loved it!'),
             (2, 4, 3, 3, 'Could have been better')
 
-
             `)
         }
       console.log('Sample data inserted.');
