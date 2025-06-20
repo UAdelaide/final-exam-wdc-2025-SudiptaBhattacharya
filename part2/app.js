@@ -2,13 +2,15 @@ const express = require('express');
 const path = require('path');
 require('dotenv').config();
 //add express-session route for session management:
-const session = require()
+const session = require('express-session');
 
 const app = express();
 
 // Middleware
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
+
+//setup session management
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
