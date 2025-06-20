@@ -14,7 +14,8 @@ app.use(express.static(path.join(__dirname, '/public')));
 app.use(session({
     secret: process.env.SESSION_SECRET || 'dog-secret',
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: false,
+    cookie: { secure: false } // Set secure: true in production with HTTPS
 }));
 
 // Routes
