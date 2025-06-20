@@ -35,6 +35,9 @@ async function initializeDb() {
         console.log('Initial data inserted successfully!');
 
     }
+    else {
+        console.log('Users table already contains data. Skipping initial data insertion.');
+    }
     catch (err) {
         console.error('Failed to connect or insert initial data:', err);
         // Exit the process if database initialization fails
@@ -42,4 +45,3 @@ async function initializeDb() {
     }
 }
 
-}
