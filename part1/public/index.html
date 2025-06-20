@@ -50,7 +50,9 @@
                     fetch('https://dog.ceo/api/breeds/image/random')
                         //get json response
                         .then(res => res.json())
-                        .then
+                        .then(data => {
+                            this.dogImage = data
+                        })
                 }
             }
         })
