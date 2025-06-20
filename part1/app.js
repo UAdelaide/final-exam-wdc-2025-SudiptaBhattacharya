@@ -32,8 +32,9 @@ const insertSampleData = async () => {
             INSERT INTO Users (username, email, password_hash, role)
             VALUES
               ('alice123', 'alice@example.com', 'hashed123', 'owner'),
-             
+
           `);
+        }
 
           const [dogRows] = await db.query('SELECT COUNT(*) AS count FROM Dogs');
           if (dogRows[0].count === 0) {
@@ -58,7 +59,7 @@ const insertSampleData = async () => {
 
 
       console.log('Sample data inserted.');
-}
+
     } catch (err) {
       console.error('Error inserting sample data:', err);
     }
