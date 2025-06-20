@@ -8,6 +8,7 @@ let connection;
     try {
         //connect to mysql without specifying a database
         const connection = await mysql.getConnection({
+            host: 'localhost',
             
         })
 
