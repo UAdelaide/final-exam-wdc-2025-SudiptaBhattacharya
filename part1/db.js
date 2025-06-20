@@ -47,3 +47,7 @@ async function initializeDb() {
     }
 }
 
+module.exports = {
+    initializeDatabase,
+    getConnection: () => connection // Method to get the initialized connection
+};
