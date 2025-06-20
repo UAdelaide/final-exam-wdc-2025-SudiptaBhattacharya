@@ -201,13 +201,18 @@ function login(){
 
 }
 
-function logout(){
+async function logout() {
+    try {
+        const response = await fetch('/users/logout', {
+            method: 'POST'
+        });
 
-    // Create AJAX Request
-    var xmlhttp = new XMLHttpRequest();
-
-    // Open connection to server & send the post data using a POST request
-    xmlhttp.open("POST", "/users/logout", true);
-    xmlhttp.send();
-
+        if (response.ok) {
+            window.location.href = 'index.html'; // Redirect to login page
+        } else {
+            throw new Error('Logout failed');
+        }
+    } catch (error) {
+        console.error('Logout error:', error);
+    }
 }
