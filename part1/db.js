@@ -9,4 +9,8 @@ const pool = mysql.createPool({
 
 let connection;
 
-(async ())
+(async () => {
+    try {
+        const connection = 
+    }
+})
