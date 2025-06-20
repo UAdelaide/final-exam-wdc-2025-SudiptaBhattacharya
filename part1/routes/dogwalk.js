@@ -74,8 +74,14 @@ router.get('/walkers/summary', async(req, res) => {
                 GROUP BY u.user_id
         `);
         res.json(rows);
-        
+
     }
-})
+    catch(error){
+        console.error("Error in returning summary of ", error);
+        res.status(500).json({
+            error: 'Failed to fetch the open walk requests'});
+
+    }
+});
 
 module.exports = router;
