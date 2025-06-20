@@ -44,8 +44,8 @@
       <button type="submit" class="btn primary-btn">Login</button>
     </form>
 
-    <!--error message for other paths-->
-    <p v-if="error" class="text-danger"
+    <!--error message for other paths using Vue mustache tag instance-->
+    <p v-if="error" class="text-danger">{{ error }}</p>
   </div>
 
   <script>
