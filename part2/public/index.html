@@ -83,7 +83,7 @@
   <script>
     const { createApp, ref } = Vue;
     createApp({
-      
+
     setup(){
       //initializing as empty strings for username, password and error message
       const username = ref('');
@@ -127,7 +127,14 @@
         }
       }
 
-      return { username, password, login, error};
+      //new mthod
+
+      return {
+        username,
+        password,
+        login,
+        error};
+
       }
 
     }).mount('#app');
