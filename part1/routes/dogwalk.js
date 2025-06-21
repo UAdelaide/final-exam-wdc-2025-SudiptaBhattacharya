@@ -47,7 +47,9 @@ router.get('/walkrequests/open', async(req, res) => {
 
     }
     catch(error){
+        //console debugging to locate errors if appear
         console.error("Error in returning open walk requests available", error);
+         //return 500 Internal Server error with a json message in that path
         res.status(500).json({
             error: 'Failed to fetch the open walk requests'});
 
