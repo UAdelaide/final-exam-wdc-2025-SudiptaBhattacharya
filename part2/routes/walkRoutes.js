@@ -24,7 +24,8 @@ router.get('/dogs', async (req, res) => {
     res.json(rows);
   }
   catch(error){
-    console.error("Error loading the dogs list:")
+    console.error("Error loading the dogs list:", error);
+    res.status(500).json({ error: 'Failed to load dogs '});
   }
 });
 
