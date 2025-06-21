@@ -90,7 +90,7 @@
       const password = ref('');
       const error = ref('');
 
-      //new method for loading dog images from the dog ceo api
+      //new variable for loading dog images from the dog ceo api and storing in array
       const dogs = ref([]);
 
       //setting Login fetch method
@@ -130,8 +130,7 @@
         }
       }
 
-      //new method for loading dog images from the dog ceo api
-      const dogs = ref([]);
+
 
       async function loadDogs(){
         try {
