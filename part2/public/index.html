@@ -146,8 +146,9 @@
           //for each dog, adding a random corresponding random image from dog.ceo
           const dog_list_photos = await Promise.all(
             dog_list.map(async dog => {
-                //using FETCH method AJAX to fetch the dog images from backend in routes/
+                //using FETCH method AJAX to fetch the dog images from backend in routes/walkRoutes.js
               const photo_response = await fetch('https://dog.ceo/api/breeds/image/random');
+              //populating the dogs array
               const photo_data = await photo_response.json();
               return { ...dog, photo: photo_data.message };
 
