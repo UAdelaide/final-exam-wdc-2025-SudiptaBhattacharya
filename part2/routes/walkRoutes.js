@@ -15,7 +15,8 @@ router.get('/dogs', async (req, res) => {
 
     //if user registered matches owner id
     if (ownerId){
-      query += 
+      query += 'WHERE owner_id = ?';
+      params.push(owner_id)
     }
   }
 });
