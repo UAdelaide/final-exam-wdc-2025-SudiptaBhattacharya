@@ -3,6 +3,7 @@ const router = express.Router();
 const db = require('../models/db');
 
 //handle /api/dogs
+//modifying the /api/dogs 
 router.get('/dogs', async (req, res) => {
   try {
     const ownerId = req.query.owner_id;
