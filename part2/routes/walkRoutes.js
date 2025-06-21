@@ -8,7 +8,8 @@ const db = require('../models/db');
 router.get('/dogs', async (req, res) => {
   try {
     const ownerId = req.query.owner_id;
-   
+
+    let query = 'SELECT'
   }
 });
 
