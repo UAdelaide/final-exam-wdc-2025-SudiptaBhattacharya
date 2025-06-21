@@ -3,7 +3,8 @@ const router = express.Router();
 const db = require('../models/db');
 
 //handle /api/dogs
-//modifying the /api/dogs route 
+//modifying the /api/dogs route to ensure it returns name , size and owner_id as well
+//to appear in home page below login
 router.get('/dogs', async (req, res) => {
   try {
     const ownerId = req.query.owner_id;
