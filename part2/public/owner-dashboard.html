@@ -97,7 +97,7 @@
         // Load the list of dogs owned by the current user
       async function loadOwnerDogs() {
         try {
-          // Fetch the current user's data from the session
+          // Fetch the current user's data (owner's dogs) from the /api/users/me session
           const userRes = await fetch('/api/users/me');
           if (!userRes.ok) throw new Error('Failed to get user');
           const userData = await userRes.json();
