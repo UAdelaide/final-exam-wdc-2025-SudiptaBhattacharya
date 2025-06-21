@@ -19,7 +19,7 @@ body {
     font-weight: bold;
     color: #007bff;
   }
-  
+
 header {
     background-color: rgb(250, 250, 251);
     border-top: 3px solid orange;
@@ -277,7 +277,7 @@ section {
     border-radius: 0.5em;
   }
 
-  /* Add spacing and clarity under login section */
+  /* Adding spacing and clarity under login section */
   h2 {
     margin-top: 3em;
     margin-bottom: 1em;
@@ -285,18 +285,18 @@ section {
     color: #333;
   }
 
-  /* Ensure table scrolls horizontally on mobile */
+  /* Ensuring table scrolls horizontally on mobile */
   .table-responsive {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
 
-  /* Optional: center the dog table section below login */
+  /*  center -  the dog table section below login */
   .container .table {
     margin-bottom: 3em;
   }
 
-  /* For tighter spacing on very small screens */
+  /*  tighter spacing on very small screens */
   @media (max-width: 576px) {
     .table th,
     .table td {
