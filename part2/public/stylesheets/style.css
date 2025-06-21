@@ -187,12 +187,12 @@ section {
     text-align: center;
   }
 
-  /* Label styling (reusing existing form-label class from Bootstrap but enhancing globally if needed) */
+  /* label styling (reusing existing form-label class from Bootstrap but enhancing globally if needed) */
   .login-form label {
     font-weight: 600;
   }
 
-  /* Input styling for both fields */
+  /* adding input styling for both fields */
   .login-form input[type="text"],
   .login-form input[type="password"] {
     width: 100%;
@@ -203,7 +203,7 @@ section {
     margin-bottom: 1em;
   }
 
-  /* submit button styling (refined Bootstrap override) */
+  /* submit button styling ( Bootstrap override) */
   .login-form button.primary-btn {
     width: 100%;
     padding: 0.75em;
