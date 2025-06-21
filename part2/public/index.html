@@ -93,7 +93,7 @@
       const password = ref('');
       const error = ref('');
 
-      //new variable for storing in array
+      //new variable for storing dogs in array
       const dogs = ref([]);
 
       //setting Login fetch method
@@ -119,6 +119,7 @@
           throw new Error(data.error || 'Login failed');
 
              // Redirect based on role
+             //if 
         if (data.user.role === 'owner') {
           window.location.href = 'owner-dashboard.html';
         } else if (data.user.role === 'walker') {
