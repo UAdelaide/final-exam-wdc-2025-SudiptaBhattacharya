@@ -73,7 +73,7 @@
         <td>{{ dog.size }}</td>
         <td>{{ dog.owner_id }}</td>
         <td>
-          <!--displaying a random image for each dog_id -->
+          <!--displaying a random image for each dog_id using the API-->
           <img :src="dog.photo" alt="dog photo" width="100" height="100" class="img-thumbnail">
         </td>
       </tr>
@@ -93,7 +93,7 @@
       const password = ref('');
       const error = ref('');
 
-      //new variable for loading dog images from the dog ceo api and storing in array
+      //new variable for storing in array
       const dogs = ref([]);
 
       //setting Login fetch method
