@@ -15,6 +15,7 @@ router.get('/dogs', async(req, res) => {
 
         `
     );
+    //get json response
     res.json(rows);
 }
     catch(error){
