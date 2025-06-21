@@ -88,6 +88,7 @@ router.get('/walkers/summary', async(req, res) => {
                 WHERE u.role = 'walker'
                 GROUP BY u.user_id
         `);
+        //get summary in json format
         res.json(rows);
 
     }
