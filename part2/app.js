@@ -25,7 +25,8 @@ const userRoutes = require('./routes/userRoutes');
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 
-//defined /api/dogs in walkRoutes, this gets the owners's registered dogs only 
+//defined /api/dogs in walkRoutes, this gets the owners's registered dogs only
+//otherwise, gets all registered dogs
 app.use('/api', walkRoutes);
 
 // Export the app instead of listening here
