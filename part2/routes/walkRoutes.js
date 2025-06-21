@@ -13,12 +13,10 @@ router.get('/dogs', async (req, res) => {
 
     //if user registered matches owner id
     if (ownerId){
-     [rows] = 
+     [rows] =
     }
 
-    //await for query
-    const [rows] = await db.query(query, params);
-    res.json(rows);
+
     console.log('Loaded dogs:', rows);
   }
   catch(error){
