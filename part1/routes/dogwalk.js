@@ -32,6 +32,7 @@ router.get('/dogs', async(req, res) => {
 //json data includes dog name, request time, location and owner's username
 
 router.get('/walkrequests/open', async(req, res) => {
+    //try block
     try{
         const [rows] = await db.query(`
         Select wrs.request_id, d.name AS dog_name,
@@ -43,10 +44,11 @@ router.get('/walkrequests/open', async(req, res) => {
         JOIN Users u ON d.owner_id = u.user_id
         WHERE wrs.status = 'open'
         `);
-        //get the walk requests which are open
+        //get the walk requests which are open in json format
         res.json(rows);
 
     }
+    //catch block
     catch(error){
         //console debugging to locate errors if appear
         console.error("Error in returning open walk requests available", error);
