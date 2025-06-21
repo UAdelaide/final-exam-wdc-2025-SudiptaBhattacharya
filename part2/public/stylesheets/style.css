@@ -233,4 +233,61 @@ section {
   }
 
 
-/* Updated styly */
+/* Updated styling for Q17 */
+/* Table styling for displaying all registered dogs */
+.table {
+    width: 100%;
+    margin-top: 2em;
+    border-collapse: collapse;
+    background-color: #ffffff;
+  }
+
+  .table th,
+  .table td {
+    padding: 0.75em;
+    border: 1px solid #dee2e6;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .table img {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 0.4em;
+    object-fit: cover;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Add spacing and clarity under login section */
+  h2 {
+    margin-top: 3em;
+    margin-bottom: 1em;
+    text-align: center;
+    color: #333;
+  }
+
+  /* Ensure table scrolls horizontally on mobile */
+  .table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Optional: center the dog table section below login */
+  .container .table {
+    margin-bottom: 3em;
+  }
+
+  /* For tighter spacing on very small screens */
+  @media (max-width: 576px) {
+    .table th,
+    .table td {
+      font-size: 0.9rem;
+      padding: 0.5em;
+    }
+  }
