@@ -90,6 +90,9 @@
       const password = ref('');
       const error = ref('');
 
+      //new method for loading dog images from the dog ceo api
+      const dogs = ref([]);
+
       //setting Login fetch method
       async function login(){
         //introduce try-catch error block for console debug and validation check
@@ -141,7 +144,7 @@
 
               const photo_response = await fetch('https://dog.ceo/api/breeds/image/random');
               const photo_data = await photo_response.json();
-              
+
             })
           )
         }
