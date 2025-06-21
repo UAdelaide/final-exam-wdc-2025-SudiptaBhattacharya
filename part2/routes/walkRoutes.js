@@ -23,7 +23,9 @@ router.get('/dogs', async (req, res) => {
     const [rows] = await db.query(query, params);
     res.json(rows);
   }
-  ca
+  catch(error){
+    console.error("Error loading the dogs list:")
+  }
 });
 
 // GET all walk requests (for walkers to view)
