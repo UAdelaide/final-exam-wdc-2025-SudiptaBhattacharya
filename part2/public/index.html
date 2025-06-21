@@ -129,7 +129,7 @@
           error.value = err.message;
         }
       }
-      //new mthod to load the dog images
+      //new method to load the dog images
       async function loadDogs(){
         try {
           const res = await fetch('/api/dogs');
@@ -147,7 +147,7 @@
           dogs.value = dog_list_photos;
         }
         catch(err){
-          console.error('Error')
+          console.error('Error loading dogs:', err);
         }
       }
 
