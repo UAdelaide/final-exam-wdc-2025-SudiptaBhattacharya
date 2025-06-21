@@ -176,6 +176,7 @@ function downvote(index) {
 
 // ... (previous functions remain unchanged)
 
+//renamed this login function so that it does not overlap with the main logic method in index.html
 async function loginQASystem() {
     let user = {
         user: document.getElementById('username').value,
