@@ -166,7 +166,7 @@ textarea {
 section {
     display: none;
 }
-/* New logic for Login form button UI */
+/* new logic for Login form button UI */
 
 /* centered login container with background and padding */
 .login-form {
@@ -178,7 +178,7 @@ section {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
 
-  /* Heading above the login form */
+  /* putting heading above the login form */
   .login-form h1 {
     font-size: 2rem;
     color: #007bff;
@@ -187,7 +187,7 @@ section {
     text-align: center;
   }
 
-  /* label styling (reusing existing form-label class from Bootstrap but enhancing globally if needed) */
+  /* label styling (reusing existing form-label class from Bootstrap but enhancing globally )*/
   .login-form label {
     font-weight: 600;
   }
