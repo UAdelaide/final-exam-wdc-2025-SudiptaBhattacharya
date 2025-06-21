@@ -9,7 +9,9 @@ router.get('/dogs', async (req, res) => {
   try {
     const ownerId = req.query.owner_id;
 
-    let query = 'SELECT'
+    let query = 'SELECT dog_id, name, size, owner_id FROM Dogs';
+
+    const params = []
   }
 });
 
