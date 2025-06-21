@@ -11,7 +11,12 @@ router.get('/dogs', async (req, res) => {
 
     let query = 'SELECT dog_id, name, size, owner_id FROM Dogs';
 
-    const params = []
+    const params = [];
+
+    //if user registered matches owner id
+    if (ownerId){
+      query += 
+    }
   }
 });
 
