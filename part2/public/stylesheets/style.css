@@ -203,7 +203,7 @@ section {
     margin-bottom: 1em;
   }
 
-  /* Submit button styling (refined Bootstrap override) */
+  /* submit button styling (refined Bootstrap override) */
   .login-form button.primary-btn {
     width: 100%;
     padding: 0.75em;
@@ -224,14 +224,14 @@ section {
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
     outline: none;
   }
-  /* Error message styling */
+  /* error message styling */
   .text-danger {
     text-align: center;
     font-weight: bold;
     margin-top: 1em;
   }
 
-  /* Responsive text alignment for mobile */
+  /* responsive text alignment for mobile */
   @media (max-width: 576px) {
     .login-form {
       margin: 4em 1em 2em;
@@ -296,7 +296,7 @@ section {
     margin-bottom: 3em;
   }
 
-  /*  tighter spacing on very small screens */
+  /* fix: tighter spacing on very small screens */
   @media (max-width: 576px) {
     .table th,
     .table td {
