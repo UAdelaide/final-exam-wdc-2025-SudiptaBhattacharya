@@ -43,6 +43,7 @@ router.get('/walkrequests/open', async(req, res) => {
         JOIN Users u ON d.owner_id = u.user_id
         WHERE wrs.status = 'open'
         `);
+        //get the walk requests which are open
         res.json(rows);
 
     }
