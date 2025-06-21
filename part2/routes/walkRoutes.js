@@ -20,7 +20,10 @@ router.get('/dogs', async (req, res) => {
     }
 
     //await for query
+    const [rows] = await db.query(query, params);
+    res.json(rows);
   }
+  ca
 });
 
 // GET all walk requests (for walkers to view)
