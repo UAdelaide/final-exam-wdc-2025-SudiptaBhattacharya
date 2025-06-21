@@ -123,9 +123,11 @@
         if (data.user.role === 'owner') {
           window.location.href = 'owner-dashboard.html';
 
-          //if logged in wal
+          //if logged in walker, redirecting to walker dashboard
         } else if (data.user.role === 'walker') {
           window.location.href = 'walker-dashboard.html';
+
+          //otherwise, invalid route
         } else {
           error.value = 'Unknown role';
         }
