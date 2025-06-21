@@ -12,7 +12,7 @@ router.get('/dogs', async (req, res) => {
 
     let rows;
 
-    //if user registered matches owner id
+    //if user registered matches owner id(shows dogs for a specific owner who is registered)
     if (ownerId){
      [rows] = await db.query(
       'SELECT dog_id, name, size, owner_id FROM Dogs WHERE owner_id = ?', [ownerId]
