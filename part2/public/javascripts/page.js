@@ -204,6 +204,7 @@ async function loginQASystem() {
 
 // ... (rest of the file remains unchanged)
 
+//unified logout 
 async function logout() {
     try {
         const response = await fetch('/users/logout', {
